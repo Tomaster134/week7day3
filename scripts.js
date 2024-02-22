@@ -1,7 +1,7 @@
 const card = document.querySelector("#card-container");
 const lookup = document.querySelector("form");
 const holder = document.querySelector("#poke-hold");
-const farm = document.querySelector('#poke-farm')
+const farm = document.querySelector("#poke-farm");
 
 const pokegrabber = async (pokeid) => {
   try {
@@ -74,10 +74,11 @@ const addpoke = async (poke) => {
     </div>
   </div>
     `;
-    farm.innerHTML = 'Your lil PokeFarm'
+  farm.innerHTML = "Your lil PokeFarm";
   const img = document.createElement("img");
   img.src = pokemon.battle_url;
-  holder.append(img)
+  holder.append(img);
+  holder.classList.add("poke-hold");
 };
 
 lookup.addEventListener("submit", (event) => {
